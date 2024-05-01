@@ -18,13 +18,23 @@
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.hvportfolio3.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_perfil"
+        android:name="com.example.hvportfolio3.ui.perfil.PerfilFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_perfil" />
     <fragment
         android:id="@+id/nav_web_view"
         android:name="com.example.hvportfolio3.ui.webview.WebViewFragment"
         android:label="LinkedIn"
         tools:layout="@layout/fragment_web_view" />
+    <fragment
+        android:id="@+id/nav_video"
+        android:name="com.example.hvportfolio3.ui.video.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" />
+    <fragment
+        android:id="@+id/nav_buttons"
+        android:name="com.example.hvportfolio3.ui.buttons.ButtonsFragment"
+        android:label="fragment_buttons"
+        tools:layout="@layout/fragment_buttons" />
 </navigation>

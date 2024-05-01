@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class HomeViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+        value = "Navega a tra ves de la app por medio del menú izquierdo."
     }
     val text: LiveData<String> = _text
 }

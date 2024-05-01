@@ -38,8 +38,13 @@ android {
     }
 }
 
-dependencies {
+repositories {
 
+}
+
+dependencies {
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("commons-io:commons-io:2.7")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -53,4 +58,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
 }

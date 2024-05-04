@@ -63,7 +63,7 @@ class ButtonsFragment : Fragment() {
         val builder = AlertDialog.Builder(requireActivity())
         with(builder)
         {
-            setTitle("List of Items")
+            setTitle("HV")
             setItems(items) { dialog, which ->
                 Toast.makeText(requireActivity(), items[which] + " is clicked", Toast.LENGTH_SHORT).show()
             }

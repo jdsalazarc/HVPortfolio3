@@ -8,12 +8,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.hvportfolio3.MainActivity
+import com.example.hvportfolio3.Perfil
 import com.example.hvportfolio3.R
 import com.example.hvportfolio3.databinding.FragmentPerfilBinding
+import com.google.gson.Gson
+import java.io.File
 
 class PerfilFragment : Fragment() {
     private var _binding: FragmentPerfilBinding? = null
@@ -61,6 +65,25 @@ class PerfilFragment : Fragment() {
             activitymain.edad  = edad
             activitymain.tipoSangre = tipoSangre
             activitymain.profesion = profesion
+
+            val perfilInput = arrayOf(
+                Perfil(nombre.toString(), email.toString(), telefono.toString(), edad.toString(), tipoSangre.toString(), profesion.toString() )
+            )
+
+            val rutaArchivo = "app/src/main/assets/data.json"
+
+            val gson = Gson()
+            val json = gson.toJson(perfilInput)
+            File(rutaArchivo).writeText(json)
+            File(rutaArchivo).writeText("Buenas")
+
+            try {
+                File(rutaArchivo).writeText(json)
+                Toast.makeText(requireActivity(), "Guardado", Toast.LENGTH_SHORT).show()
+            }catch (e: FileSystemException){
+                Toast.makeText(requireActivity(), "Hubo un error al guardar", Toast.LENGTH_SHORT).show()
+            }
+
 
 
         }

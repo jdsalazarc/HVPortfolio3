@@ -3,7 +3,6 @@ package com.example.hvportfolio3
 import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
-import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
@@ -20,12 +19,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
     var uriProfileImage: Uri? = null
-    var nombre: EditText? = null
-    var email: EditText? = null
-    var telefono: EditText? = null
-    var edad: EditText? = null
-    var tipoSangre: EditText? = null
-    var profesion: EditText? = null
+    var nombre: String = "Tu nombre"
+    var email: String = "Tu e-mail"
+    var telefono: String = "Tu telefono"
+    var edad: String = "Tu edad"
+    var tipoSangre: String = "Tu tipo de sangre"
+    var profesion: String = "Tu profesion"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -68,6 +67,8 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
+
 
 
 }

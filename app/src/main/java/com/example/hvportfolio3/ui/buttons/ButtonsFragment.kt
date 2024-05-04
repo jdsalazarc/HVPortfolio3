@@ -59,7 +59,7 @@ class ButtonsFragment : Fragment() {
 
     fun alertHV(view: View){
         val activitymain = (activity as MainActivity)
-        val items = arrayOf(activitymain.nombre.toString(), activitymain.email.toString() )
+        val items = arrayOf(activitymain.nombre, activitymain.email, activitymain.edad, activitymain.telefono, activitymain.profesion, activitymain.tipoSangre )
         val builder = AlertDialog.Builder(requireActivity())
         with(builder)
         {

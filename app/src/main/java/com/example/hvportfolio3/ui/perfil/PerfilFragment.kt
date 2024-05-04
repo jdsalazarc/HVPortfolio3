@@ -22,6 +22,7 @@ import java.io.File
 class PerfilFragment : Fragment() {
     private var _binding: FragmentPerfilBinding? = null
 
+
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -59,12 +60,13 @@ class PerfilFragment : Fragment() {
         }
 
         binding.guardarPerfil.setOnClickListener{
-            activitymain.nombre= nombre  // Setter
-            activitymain.email = email
-            activitymain.telefono = telefono
-            activitymain.edad  = edad
-            activitymain.tipoSangre = tipoSangre
-            activitymain.profesion = profesion
+            activitymain.nombre= nombre.toString()  // Setter
+            activitymain.email = email.toString()
+            activitymain.telefono = telefono.toString()
+            activitymain.edad  = edad.toString()
+            activitymain.tipoSangre = tipoSangre.toString()
+            activitymain.profesion = profesion.toString()
+
 
             val perfilInput = arrayOf(
                 Perfil(nombre.toString(), email.toString(), telefono.toString(), edad.toString(), tipoSangre.toString(), profesion.toString() )
